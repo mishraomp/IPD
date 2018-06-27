@@ -16,13 +16,13 @@ import { MenuComponent } from './menu/menu.component';
 
 //
 //
-import { ReactiveFormsModule }    from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
 
-import { routing }        from './app.routing';
+import { routing } from './app.routing';
 
 import { AlertComponent } from './_directives';
 import { AuthGuard } from './_guards';

@@ -36,9 +36,9 @@ export class MenuComponent implements OnInit {
                 ]
             }
         ];
-        for(let i =0 ; i <10; i++){
+        for (let i = 0 ; i < 10; i++) {
             const item = {
-                label: 'Course'+i,
+                label: 'Course' + i,
                 icon: 'fa fa-fw fa-file-o',
                 items: [{
                     label: 'Add'
@@ -46,7 +46,7 @@ export class MenuComponent implements OnInit {
                 { label: 'Edit' },
                 { label: 'Search' }
                 ]
-            }
+            };
             this.items.push(item);
         }
     }
