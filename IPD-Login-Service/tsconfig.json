@@ -1,0 +1,46 @@
+{
+    "compilerOptions": {
+      "rootDir": "./src",
+      "outDir": "./dist",
+      "sourceRoot": "./src",
+      "sourceMap": true,
+      "strict": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": true,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "target": "es5",
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata":true,
+      "strictPropertyInitialization": false,
+      "watch": false,
+      "lib": [      
+        "dom",
+        "es2015",
+        "es6",
+        "esnext.asynciterable",
+      ],
+      "types": [
+        "reflect-metadata",
+        "node",
+        "bunyan",
+        "csv-parse", 
+        "express", 
+        "nconf", 
+        "uuid", 
+        "pg-promise",
+        "jest"
+      ],
+      "typeRoots": [
+        "./typings",
+        "./node_modules/@types"
+      ]
+    },
+    "include": [
+      "src/**/*",
+      "typings/**/*"
+    ],
+    "exclude": [
+      "node_modules/**/*"
+    ]
+  }

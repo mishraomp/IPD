@@ -1,0 +1,21 @@
+{
+    "folders": [
+      {
+        "path": "."
+      }
+    ],
+      "settings": {
+          "files.autoSave": "on",
+          "editor.tabSize": 2,
+          "editor.detectIndentation": false,
+      "editor.insertSpaces": true,
+      "editor.minimap.enabled": false,
+          "files.associations": {
+        "*.docker": "dockerfile"
+      },
+      "tslint.configFile": "tslint.json",
+      "tslint.enable": true,
+      "tslint.autoFixOnSave": true,
+      "tslint.alwaysShowRuleFailuresAsWarnings": false
+    }
+  }
