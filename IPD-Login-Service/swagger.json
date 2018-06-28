@@ -1,0 +1,66 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "",
+        "description": "",
+        "version": "1.0"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "host": "localhost:3000",
+    "basePath": "/api/v1/login-service",
+    "paths": {
+        "/login": {
+            "post": {
+                "x-swagger-router-controller": "middleware-name1",
+                "operationId": "login",
+                "summary": "Authentication and JWT Token generation.",
+                "description": "",
+                "consumes": [
+                    "application/json",
+                    "application/xml"
+                  ],
+                  "produces": [
+                    "application/xml",
+                    "application/json"
+                  ],
+                  "parameters": [
+                    {
+                      "in": "body",
+                      "name": "body",
+                      "description": "user object that needs to be validated",
+                      "required": true,
+                      "schema": {
+                        "$ref": "#/definitions/user"
+                      }
+                    }
+                  ],
+                "responses": {
+                    "200": {
+                        "description": "ok"
+                    },
+                    "201": {
+                        "description": "created"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+    "user":{
+        "type": "object",
+        "properties": {
+          "user-id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "password": {
+            "type": "string"
+           
+          }
+        }
+    }
+    }
+
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ipd-login-service",
+  "version": "1.0.0",
+  "description": "this deals with login functionality for IPD UI",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "omprakash mishra",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bunyan": "^1.8.12",
+    "express": "^4.16.2",
+    "lodash": "^4.17.4",
+    "method-override": "^2.3.6",
+    "nconf": "^0.8.5",
+    "nodemon": "^1.17.5",
+    "swagger-ui-express": "^3.0.10"
+  }
+}
