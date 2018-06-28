@@ -12,6 +12,7 @@
     "author": {
         "name": "omprakash mishra"
     },
+    "private": true,
     "dependencies": {
         "@angular/animations": "^6.0.2",
         "@angular/common": "^6.0.2",
