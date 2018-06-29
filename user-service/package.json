@@ -9,8 +9,8 @@
     "build": "tsc -p .",
     "watch": "tsc -w -p .",
     "start": "node ./dist/server.js",
-    "debug-app-local": "npm run swagger-gen && npm run watch && nodemon --nolazy --inspect=0.0.0.0:9222 ./dist/server.js",
-    "swagger-gen": "tsoa swagger && tsoa routes"
+    "debug-app-local": "npm run swagger-gen && npm run build && nodemon --nolazy --inspect=0.0.0.0:9222 ./dist/server.js",
+    "swagger-gen": "tsoa swagger"
   },
   "nodemonConfig": {
     "watch": [
