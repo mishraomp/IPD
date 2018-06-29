@@ -1,4 +1,18 @@
 {
     "PORT": 3000,
-    "MICRO_SERVICE_CODE":"IPD_USER_SERVICE"
+    "MICRO_SERVICE_CODE":"IPD_USER_SERVICE",
+    "LOG_CONFIG": {
+    "APP_TRACE_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-trace.log",
+    "APP_DEBUG_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-debug.log",
+    "APP_INFO_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-info.log",
+    "APP_WARN_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-warn.log",
+    "APP_ERROR_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-error.log",
+    "APP_FATAL_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-fatal.log",
+    "REQ_RSP_TRACE_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-reqrsp-trace.log",
+    "REQ_RSP_DEBUG_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-reqrsp-debug.log",
+    "REQ_RSP_INFO_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-reqrsp-info.log",
+    "REQ_RSP_WARN_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-reqrsp-warn.log",
+    "REQ_RSP_ERROR_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-reqrsp-error.log",
+    "REQ_RSP_FATAL_LOGGER_FILE_PATH": "/home/isddev/logs/user-service/user-service-reqrsp-fatal.log"
+  }
 }

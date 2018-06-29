@@ -1,0 +1,26 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach Debug User service",
+      "preLaunchTask": "user-service-ts-watch",
+      "cwd": "${workspaceRoot}/user-service",
+      "port": 9222,
+      "restart": true,
+      "localRoot": "${workspaceRoot}/user-service",
+      "outFiles": [
+        "${workspaceRoot}/user-service/dist/**/*.js"
+      ],
+      "internalConsoleOptions": "neverOpen",
+      "protocol": "inspector",
+      "timeout": 1000000
+      
+    }
+  ]
+}

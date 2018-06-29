@@ -2,6 +2,7 @@ import * as swaggerUi from "swagger-ui-express";
 import { Config } from "./config";
 import * as express from "express";
 import { router } from "../routes";
+import { LoggerConfig } from "./logger-config";
 
 export class App {
   public static async handleJSONParsingErrors(err: any, req: express.Request, res: express.Response, next: express.NextFunction): Promise<void> {
@@ -95,7 +96,8 @@ export class App {
 
   constructor() {
     this.application = express();
-    this.application.set("port", Config.get("server_port"));
+    new LoggerConfig().appLogger.debug(Config.get("PORT"), `Port`);
+    this.application.set("port", Config.get("PORT"));
     const swaggerDocument = require("../swagger.json");
     this.application.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument)); // Swagger UI
     this.application.use(App.handleJSONParsingErrors); // JSON formatting error handling

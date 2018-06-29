@@ -1,16 +1,17 @@
 {
-  "name": "ipd-login-service",
+  "name": "user-service",
   "version": "1.0.0",
-  "description": "this deals with login functionality for IPD UI",
+  "description": "this deals with login and user functionality for IPD UI",
   "main": "./dist/server.js",
   "scripts": {
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "pretest": "npm run lint",
-    "build": "tsc -p .",
+    "build": "npm run swagger-gen && tsc -p .  && npm run  copy-app-config",
     "watch": "tsc -w -p .",
     "start": "node ./dist/server.js",
-    "debug-app-local": "npm run swagger-gen && npm run build && nodemon --nolazy --inspect=0.0.0.0:9222 ./dist/server.js",
-    "swagger-gen": "tsoa swagger"
+    "debug-app-local": "npm run build && nodemon --nolazy --inspect=0.0.0.0:9222 ./dist/server.js --NODE_ENV=local",
+    "swagger-gen": "tsoa swagger",
+    "copy-app-config": "ncp ./src/config/application.json ./dist/config/application.json"
   },
   "nodemonConfig": {
     "watch": [
@@ -36,6 +37,7 @@
     "inversify": "^4.10.0",
     "method-override": "^2.3.6",
     "nconf": "^0.10.0",
+    "ncp": "^2.0.0",
     "nodemon": "^1.17.5",
     "pg-promise": "^8.2.2",
     "reflect-metadata": "^0.1.12",
