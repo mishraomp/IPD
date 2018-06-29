@@ -1,2 +1,4 @@
-IPD-Login-Service/node_modules
-IPD-Login-Service/package-lock.json
+user-service/node_modules
+user-service/package-lock.json
+IPD-UI/package-lock.json
+IPD-UI/node_modules

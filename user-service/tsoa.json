@@ -1,0 +1,18 @@
+{
+  "swagger": {
+      "outputDirectory": "./dist",
+      "entryFile": "./src/server.ts",
+      "host": "localhost:3000",
+      "basePath": "/"
+  },
+  "routes": {
+      "basePath": "/",
+      "entryFile": "./src/server.ts",
+      "middleware": "express",
+      "routesDir": "./src",
+      "iocModule": "./src/config/ioc"
+  },
+  "ignore": [
+    "**/node_modules/aws-sdk/**"
+  ]
+}

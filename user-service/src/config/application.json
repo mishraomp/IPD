@@ -1,0 +1,4 @@
+{
+    "PORT": 3000,
+    "MICRO_SERVICE_CODE":"IPD_USER_SERVICE"
+}

@@ -1,0 +1,55 @@
+{
+	"basePath": "",
+	"consumes": [
+		"application/json"
+	],
+	"definitions": {
+		"UserModel": {
+			"properties": {},
+			"type": "object"
+		}
+	},
+	"info": {
+		"title": "ipd-login-service",
+		"version": "1.0.0",
+		"description": "this deals with login functionality for IPD UI",
+		"license": {
+			"name": "ISC"
+		}
+	},
+	"paths": {
+		"/api/user-service": {
+			"post": {
+				"operationId": "Login",
+				"produces": [
+					"application/json"
+				],
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"schema": {
+							"type": "object"
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "user",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/UserModel"
+						}
+					}
+				]
+			}
+		}
+	},
+	"produces": [
+		"application/json"
+	],
+	"swagger": "2.0",
+	"securityDefinitions": {},
+	"host": "localhost:3000"
+}
