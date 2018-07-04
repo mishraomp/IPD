@@ -1,4 +1,5 @@
 import * as swaggerUi from "swagger-ui-express";
+import * as bodyParser from "body-parser";
 import { Config } from "./config";
 import * as express from "express";
 import { router } from "../routes";
@@ -100,6 +101,11 @@ export class App {
     this.application.set("port", Config.get("PORT"));
     const swaggerDocument = require("../swagger.json");
     this.application.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument)); // Swagger UI
+    this.application.use(bodyParser.json({ limit: "16mb" }));
+    this.application.use(bodyParser.urlencoded({
+      extended: true,
+      limit: "10kb"
+    }));
     this.application.use(App.handleJSONParsingErrors); // JSON formatting error handling
     this.application.use(router);
     this.application.use(App.catchNotFoundError);

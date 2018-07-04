@@ -2,9 +2,9 @@ import { IValidatableObject } from "../middleware/interfaces/i-validatable-objec
 
 export class UserModel implements IValidatableObject {
 
-  private userName: string;
-  private pwd: string;
-  private token: string;
+  public userName: string;
+  public pwd: string;
+  public token: string;
   public validate(): Promise<string[]> {
     return Promise.resolve([]);
   }

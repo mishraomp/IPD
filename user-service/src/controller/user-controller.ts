@@ -2,7 +2,7 @@ import { UserModel } from "../model/user-model";
 import { LoggerConfig } from "../config/logger-config";
 import { Controller, Route, Post, Body } from "tsoa";
 
-@Route("/api/user-service/login")
+@Route("/api/v1/user-service/login")
 export class UserController extends Controller {
   @Post()
   public async login (@Body() user: UserModel): Promise < any > {
